@@ -1,7 +1,7 @@
-LAN=eth1
-NAT=eth0
+LAN=eth1  # windows LAN
+WAN=eth0  # Linux WAN
 
-#Enable NAT
+#Enable WAN
 
 iptables --flush
 
@@ -11,7 +11,7 @@ iptables --delete-chain
 
 iptables --table nat --delete-chain
 
-iptables --table nat --append POSTROUTING --out-interface $NAT -j MASQUERADE
+iptables --table nat --append POSTROUTING --out-interface $WAN -j MASQUERADE
 
 iptables --append FORWARD --in-interface $LAN -j ACCEPT
 

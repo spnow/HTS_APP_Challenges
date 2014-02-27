@@ -1,0 +1,9 @@
+Instead of modifying binary file, I just set up a DNS poisoner to fish the app
+query to our local http server and get "true".
+
+Two VMs - Ubuntu (router & local DNS server) + Windows (app3win.exe execution)
+
+  python -m http.server
+  ./app3win.start
+  # execute app3win.exe in Windows host
+  ./app3win.stop
