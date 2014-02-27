@@ -14,7 +14,7 @@ query to our local http server and get "true".
 
 Two VMs - Ubuntu (router & local DNS server) + Windows (app3win.exe execution)
 
-  sudo ./app3win.start
+  sudo ./spoof.sh start
   # execute app3win.exe in Windows host
   # Ctrl+C on bash to kill app3win.start
-  sudo ./app3win.stop
+  sudo ./spoof.sh stop
