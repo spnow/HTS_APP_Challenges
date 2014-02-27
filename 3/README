@@ -1,3 +1,12 @@
+This challenge tries to contact authentication server for status, more
+specifically it connects to /missions/application/app3/auth.php
+
+Default return status is "false" and there seems no easy way to overwrite this
+behavior.
+
+There is one simple way to bypass this check by modifying the check value
+within the program, Google it.
+
 Instead of modifying binary file, I just set up a DNS poisoner to fish the app
 query to our local http server and get "true".
 

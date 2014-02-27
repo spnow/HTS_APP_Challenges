@@ -1,0 +1,12 @@
+This challenge basically 
+  1. takes the input
+  2. sum ASCII values of each
+  3. uses this sum as a key and magic number from app7win.enc file to feed a
+     transformation process to see if the result is 3530.
+
+Simple brute force would find the ASCII sum and you can come up with any ASCII
+input whose sum is this.
+
+Note: The challenge program use getc function to read one char at a time, and
+check char against '\n' to end input process. However, '\n' is also fed into
+the sum. So you need to subtract '\n' from the sum.
