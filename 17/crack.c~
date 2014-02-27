@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+ 
+int main(int ac, char *av[])
+{
+    int i, val = 0;
+    char passwd[100] = "HTS";
+
+    if (argc != 2)
+      {
+        fprintf (stderr, "Usage: %s <user_name>\n", argv[0]);
+        exit (-1);
+      }
+ 
+    for (i = 0; i < strlen(av[1]); i++)
+        sprintf(passwd,
+                "%s%s%02x",
+                passwd,
+                i % 2 ? "" : "-",
+                val = ~(av[1][i] << val) & ((av[1][i] - val) >> 1));
+ 
+    printf("%s\n", passwd);
+ 
+    return 0;
+}
